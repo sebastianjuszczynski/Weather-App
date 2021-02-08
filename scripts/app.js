@@ -3,6 +3,7 @@ const card = document.querySelector(".card");
 const details = document.querySelector(".details");
 const time = document.querySelector("img.time");
 const icon = document.querySelector(".icon img");
+const input = document.querySelector("input");
 
 const updateUI = (data) => {
     const { cityDetails, weather } = data;
@@ -42,7 +43,7 @@ cityForm.addEventListener("submit", e => {
     e.preventDefault();
     const city = cityForm.city.value.trim();
     cityForm.reset();
-    cityForm.blur();
+    input.blur();
     updateCity(city)
         .then(data => updateUI(data))
         .catch(err => console.log(err));
