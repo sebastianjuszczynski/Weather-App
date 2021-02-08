@@ -15,6 +15,8 @@ const updateUI = (data) => {
             <span>&deg;C</span>
         </div>
     `;
+    const iconSrc = `img/icons/${weather.WeatherIcon}.svg`;
+    icon.setAttribute("src", iconSrc);
 
     let timeSrc;
     if (weather.IsDayTime) {
